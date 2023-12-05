@@ -1,4 +1,5 @@
-FROM node:alpine json:alpine
+FROM node:alpine 
+FROM json:alpine
 
 WORKDIR /app
 
