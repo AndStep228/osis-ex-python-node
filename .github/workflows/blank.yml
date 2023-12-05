@@ -17,9 +17,9 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - run: docker build -t ghcr.io/andstep228/osis-ex-python-node/python-app:1.0 .
+      - run: docker build -t ghcr.io/andstep228/osis-ex-python-node/python-app:1.0 ./python-app
       - run: docker push ghcr.io/andstep228/osis-ex-python-node/python-app:1.0
-      - run: docker build -t ghcr.io/andstep228/osis-ex-python-node/node-app:1.0 .
+      - run: docker build -t ghcr.io/andstep228/osis-ex-python-node/node-app:1.0 ./node-app
       - run: docker push ghcr.io/andstep228/osis-ex-python-node/node-app:1.0
   deploy:
     runs-on: ubuntu-latest
